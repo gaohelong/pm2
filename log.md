@@ -24,7 +24,7 @@ $ pm2 delete   <app_name|id|'all'|json_conf>
 # 查看pm2详情
 $ pm2 desc
 
-# pm2监控
+# 所有进程监控
 $ pm2 monit
 
 # 所有进程日志
@@ -33,9 +33,9 @@ $ pm2 log
 # 清空所有进程日志
 $ pm2 flush
 
+# 启动一个进程并把它命名为 prod
+$ pm2 start npm --name prod -- start
+
 # 开启集群(开启3个进程)
 $ pm2 start server/prod.js -i 3
-
-# pm2执行npm开启集群(开启3个进程)
-$ pm2 start -i 3 npm -- start
 ```
